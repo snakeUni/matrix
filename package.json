@@ -1,0 +1,37 @@
+{
+  "name": "matrix",
+  "version": "0.0.1",
+  "description": "matrix",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snakeUni/matrix.git"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "ui",
+    "matrix"
+  ],
+  "author": "lanyincao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/snakeUni/matrix/issues"
+  },
+  "homepage": "https://github.com/snakeUni/matrix#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "ts-loader": "^5.3.2",
+    "tslint": "^5.12.0",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "^3.2.2"
+  }
+}
