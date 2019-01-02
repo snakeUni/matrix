@@ -1,8 +1,7 @@
 import * as React from 'react'
 
 export interface MatrixProps {
-  dataSources: [];
+  dataSources: any[];
   length: number;
-  item?: React.ReactNode;
   children?: React.ReactNode;
 }

@@ -29,15 +29,14 @@ export default class Matrix extends React.Component<MatrixProps, any> {
   };
 
   render() {
-    const { item, children } = this.props;
-    const child = item || children;
+    const { children } = this.props;
     const sources = this.getSourcesData();
     return (
       <div className="matrix">
         {sources.map((source, i) => {
           return (
             <div className="matrix-row" key={`row-${i}`}>
-              {source.map((src, j) => {
+              {source.map((src: any, j) => {
                 if (src._type === "blank") {
                   return (
                     <div
@@ -51,7 +50,7 @@ export default class Matrix extends React.Component<MatrixProps, any> {
                       className="matrix-row-item item-item"
                       key={`item-${i}-${j}`}
                     >
-                      {React.cloneElement(child, { src })}
+                      {React.cloneElement(children as any, { src })}
                     </div>
                   );
                 }
