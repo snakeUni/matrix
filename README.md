@@ -33,6 +33,7 @@ export default class Demo extends React.Component {
   }
 }
 ```
+![img](http://thyrsi.com/t6/648/1546482132x2890211732.jpg)
 ## api
 > dataSources: 用于渲染的源数据，默认为空数组[]  
 > length: 一行的长度，默认是4  
