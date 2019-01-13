@@ -9,4 +9,6 @@ export interface MatrixProps {
   children?: React.ReactNode;
   // 间隔
   gutter?: number
+  // className
+  className?: string
 }

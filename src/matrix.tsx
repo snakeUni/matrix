@@ -29,7 +29,7 @@ export default class Matrix extends React.Component<MatrixProps, any> {
   };
 
   render() {
-    const { children, gutter } = this.props;
+    const { children, gutter, className } = this.props;
     const sources = this.getSourcesData();
     let style: any = {}
     if (gutter) {
@@ -37,11 +37,12 @@ export default class Matrix extends React.Component<MatrixProps, any> {
       (style as any).marginRight = gutter / 2;
     }
     return (
-      <div className="matrix">
+      <div className={`matrix ${className}`}>
         {sources.map((source, i) => {
           return (
             <div className="matrix-row" key={`row-${i}`}>
               {source.map((src: any, j) => {
+                style.marginLeft = j === 0 ? 0 :style.marginLeft
                 if (src._type === "blank") {
                   return (
                     <div
