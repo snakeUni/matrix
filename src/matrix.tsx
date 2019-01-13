@@ -38,7 +38,7 @@ export default class Matrix extends React.Component<MatrixProps, any> {
   }
 
   render() {
-    const { children, gutter, className } = this.props;
+    const { children, className } = this.props;
     const sources = this.getSourcesData();
     return (
       <div className={`matrix ${className}`}>
