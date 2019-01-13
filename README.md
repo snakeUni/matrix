@@ -33,6 +33,18 @@ export default class Demo extends React.Component {
   }
 }
 ```
+一行个数自由配置
+```js
+<Matrix dataSources={dataSources} length={6}>
+  <Item />
+</Matrix>
+```
+增加了`gutter`可以自由改变间距
+```js
+<Matrix dataSources={dataSources} gutter={20}>
+  <Item />
+</Matrix>
+```
 ![img](http://thyrsi.com/t6/648/1546482132x2890211732.jpg)
 ## api
 > dataSources: 用于渲染的源数据，默认为空数组[]  
