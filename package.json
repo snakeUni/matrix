@@ -11,7 +11,10 @@
   ],
   "scripts": {
     "test": "jest --config jest.config.js",
-    "build": "node scripts/build.js",
+    "build": "npm run build:js && npm run build:es && npm run build:lib",
+    "build:js": "node scripts/build.js",
+    "build:es": "tsc -d --emitDeclarationOnly --declarationDir es",
+    "build:lib": "tsc -d --emitDeclarationOnly --declarationDir lib",
     "patch": "npm version patch && npm publish"
   },
   "repository": {
