@@ -38,3 +38,4 @@ export default class Demo extends React.Component {
 > dataSources: 用于渲染的源数据，默认为空数组[]  
 > length: 一行的长度，默认是4  
 > Item会接受`src`作为props,`src`为dataSources的每一个数据 
+> gutter 数字 可以设置间距

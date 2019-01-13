@@ -29,8 +29,13 @@ export default class Matrix extends React.Component<MatrixProps, any> {
   };
 
   render() {
-    const { children } = this.props;
+    const { children, gutter } = this.props;
     const sources = this.getSourcesData();
+    let style: any = {}
+    if (gutter) {
+      (style as any).marginLeft = gutter / 2;
+      (style as any).marginRight = gutter / 2;
+    }
     return (
       <div className="matrix">
         {sources.map((source, i) => {
@@ -42,6 +47,7 @@ export default class Matrix extends React.Component<MatrixProps, any> {
                     <div
                       className="matrix-row-item item-blank"
                       key={`item-${i}-${j}`}
+                      style={style}
                     />
                   );
                 } else {
@@ -49,6 +55,7 @@ export default class Matrix extends React.Component<MatrixProps, any> {
                     <div
                       className="matrix-row-item item-item"
                       key={`item-${i}-${j}`}
+                      style={style}
                     >
                       {React.cloneElement(children as any, { src })}
                     </div>
